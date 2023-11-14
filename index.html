@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a class="open" href="#open">Открыть окно</a>
+<div id="modal" class="modal bounceIn">
+    <div id="close">+</div>
+      
+    <form>
+    <div class="modal_txt"><h3>Заявка на консультацию </h3>
+        <input type="text" name="name" placeholder="Введите имя"> 
+        <input type="text" name="phone" placeholder="Номер телефона">
+        <button>Оставить заявку</button>
+
+   </div>
+</div>  </form>
+<style>
+    *{
+        
+        border: none;
+    box-sizing: border-box;
+    font-family: Gilroy,sans-serif;
+    font-weight: 400;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    -webkit-text-decoration: none;
+    text-decoration: none;    
+    
+    }
+    form{
+        display: flex;
+            flex-direction: column;
+            /* max-width: 400px;
+            min-width: 380px; */
+            width: 100%;
+            gap: 10px;
+    
+    }
+    button {
+        background-color: #151fe1;
+        /* background-color: var(--corp); */
+    border: 2px solid transparent;
+    border-radius: 1000px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    height: 44px;
+    padding-left: 24px;
+    padding-right: 24px;
+    transition: .3s ease;
+    white-space: nowrap;
+
+    }
+    .modal {
+    display: none;
+    background: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99999;
+    border-radius: 4px;
+  
+}
+.modal input{
+    background-color: #f1f6fb;
+    background-color: #fff;
+    border: 1px solid rgba(185,190,199,.6);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 56px;
+    margin-bottom: 12px;
+    min-width: 244px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: .1s ease;
+    width: 100%;
+} 
+.modal_vis {
+    display: block;
+}
+.body_block {
+    overflow: hidden;
+    margin-right: 17px;
+}
+#close {
+    color: #BFE2FF;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Times, sans-serif;
+    border-radius: 50%;
+    border: 4px solid #BFE2FF;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    transform: rotate(45deg);
+    transition: all 0.6s;
+    box-sizing: content-box;
+}
+#close:hover {
+    color: #FFF;
+    transform: rotate(135deg);
+}
+.modal_txt {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+    background: #FFF;
+    padding: 30px;
+    margin: 100px auto;
+    max-width: 800px;
+}
+</style>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
